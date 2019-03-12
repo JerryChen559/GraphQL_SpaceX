@@ -4,7 +4,7 @@ import { ApolloProvider } from "react-apollo";
 import { BrowserRouter, Route } from "react-router-dom";
 
 import Launches from "./Components/Launches";
-import Launch from "./Components/Launch";
+import LaunchDetails from "./Components/LaunchDetails";
 import "./App.css";
 import logoSpaceX from "./logoSpaceX.jpg";
 
@@ -24,7 +24,11 @@ class App extends Component {
               style={{ width: 300, display: "block", margin: "auto" }}
             />
             <Route exact path="/" component={Launches} />
-            <Route exact path="/launch/:flight_number" component={Launch} />
+            <Route
+              exact
+              path="/launch/:flight_number"
+              component={LaunchDetails}
+            />
           </div>
         </BrowserRouter>
       </ApolloProvider>
